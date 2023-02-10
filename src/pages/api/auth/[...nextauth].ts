@@ -1,7 +1,9 @@
+import { PrismaAdapter } from '@next-auth/prisma-adapter'
 import NextAuth from 'next-auth'
 import CredentialsProvider from 'next-auth/providers/credentials'
 import { getCsrfToken } from 'next-auth/react'
 import { SiweMessage } from 'siwe'
+import { prisma } from '@/prisma'
 
 // For more information on each option (and a full list of options) go to
 // https://next-auth.js.org/configuration/options
@@ -55,6 +57,7 @@ export default async function auth(req: any, res: any) {
 
   return await NextAuth(req, res, {
     // https://next-auth.js.org/configuration/providers/oauth
+    adapter: PrismaAdapter(prisma),
     providers,
     session: {
       strategy: 'jwt'
@@ -65,6 +68,7 @@ export default async function auth(req: any, res: any) {
         session.address = token.sub
         session.user.name = token.sub
         session.user.image = 'https://www.fillmurray.com/128/128'
+
         return session
       }
     },

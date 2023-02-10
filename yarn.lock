@@ -1257,6 +1257,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@prisma/engines@npm:4.10.1":
+  version: 4.10.1
+  resolution: "@prisma/engines@npm:4.10.1"
+  checksum: 359e32db3155640315661055d8e6430d60c10ff057b5d4c070164587d872ab6d4c292cee5ac35d364c1a2f6da0265fa847023c5cc1a4bf3c067fbecbbb638273
+  languageName: node
+  linkType: hard
+
 "@rainbow-me/rainbowkit-siwe-next-auth@npm:^0.1.5":
   version: 0.1.5
   resolution: "@rainbow-me/rainbowkit-siwe-next-auth@npm:0.1.5"
@@ -6303,6 +6310,7 @@ __metadata:
     postcss: ^8.4.21
     prettier: ^2.8.4
     prettier-plugin-tailwindcss: ^0.2.2
+    prisma: ^4.10.1
     react: 18.2.0
     react-dom: 18.2.0
     siwe: beta
@@ -7746,6 +7754,18 @@ __metadata:
   version: 3.8.0
   resolution: "pretty-format@npm:3.8.0"
   checksum: 21a114d43ef06978f8f7f6212be4649b0b094f05d9b30e14e37550bf35c8ca24d8adbca9e5adc4cc15d9eaf7a1e7a30478a4dc37b30982bfdf0292a5b385484c
+  languageName: node
+  linkType: hard
+
+"prisma@npm:^4.10.1":
+  version: 4.10.1
+  resolution: "prisma@npm:4.10.1"
+  dependencies:
+    "@prisma/engines": 4.10.1
+  bin:
+    prisma: build/index.js
+    prisma2: build/index.js
+  checksum: e4078909ad07bcfbe19e10aa0822dca47622b099b4ad6f48da743d47a658e25662de757b5b0e3bbfcd04c0b346dfcfe4d1fa6f0486312dfd8b193b32795ed5ce
   languageName: node
   linkType: hard
 

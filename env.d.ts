@@ -6,6 +6,7 @@ export declare global {
       NEXTAUTH_URL: string
       NEXT_PUBLIC_ETH_CHAIN: string
       ALCHEMY_KEY: string
+      DATABASE_URL: string
     }
   }
 }
