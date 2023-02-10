@@ -6,10 +6,10 @@ import Link from 'next/link'
 import { useConnectModal } from '@rainbow-me/rainbowkit'
 
 export default function Home() {
-  const { status } = useSession()
+  const { status, data } = useSession()
   const { openConnectModal } = useConnectModal()
   const btnClasses =
-    'flex items-center justify-center rounded-[4px] bg-primary px-4 font-bold hover:scale-[1.03] min-w-[50px] py-3'
+    'rounded-[4px] bg-primary px-4 font-bold hover:scale-[1.03] min-w-[50px] py-3'
 
   return (
     <>
@@ -30,6 +30,14 @@ export default function Home() {
             <br /> <strong>communities</strong>, help them succeed, and earn{' '}
             <strong>rewards</strong>.
           </h2>
+          {status === 'authenticated' ? (
+            <p className="mb-10">
+              Hey, Welcome{' '}
+              {data?.user?.name?.slice(0, 4) +
+                '...' +
+                data?.user?.name?.slice(-4)}
+            </p>
+          ) : null}
           {status === 'authenticated' ? (
             <Link href="/dashboard" className={btnClasses}>
               Dashboard

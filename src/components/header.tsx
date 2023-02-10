@@ -12,7 +12,7 @@ export default function Header() {
         <Logo />
       </Link>
       <div className="flex space-x-2">
-        {status !== 'authenticated' ? (
+        {status === 'authenticated' ? (
           <Link
             href="/dashboard"
             className="flex items-center justify-center rounded-[4px] bg-primary px-4 font-bold hover:scale-[1.03]"
