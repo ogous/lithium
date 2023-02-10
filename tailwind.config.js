@@ -12,7 +12,7 @@ module.exports = {
         lexend: ['var(--font-lexend)', ...fontFamily.sans]
       },
       colors: {
-        layer: '#0b0b0d',
+        layer: '#151518',
         text: '#d3d7e4',
         primary: '#3d68ff',
         secondary: '#cc40e1'

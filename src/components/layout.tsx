@@ -5,7 +5,7 @@ import Footer from '@/components/footer'
 
 const lexend = Lexend({
   variable: '--font-lexend',
-  weight: ['400', '700', '900'],
+  weight: ['200', '300', '400', '700', '800', '900'],
   subsets: ['latin']
 })
 
@@ -14,7 +14,7 @@ export default function Layout({ children }: { children: JSX.Element }) {
     <div
       className={clsx(
         lexend.variable,
-        'flex min-h-screen flex-col bg-layer text-white'
+        'flex min-h-screen flex-col overflow-y-hidden bg-layer text-white'
       )}
     >
       <Header />
